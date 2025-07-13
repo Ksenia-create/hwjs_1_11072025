@@ -45,11 +45,8 @@ if (a2 > 0) {
     let a = 10;
     let b = 2;
     
-    if (a > 2 && 
-        a < 11 ||
-        b >= 6 &&
-        b < 14) {
-    console.log('true');
+    if (a > 2 && a < 11 || b >= 6 && b < 14) {
+        console.log('true');
     } else {
         console.log('false');
     }
@@ -93,63 +90,37 @@ if (day >=21 && day <= 31) {
     }
 
 
-// Задание 9
+// Задание 9 
 
-function daysToYears(days) {
-    return Math.round(days / 365);
-}
+let days = prompt('Введите количество дней');
+let daysNum = Number(days);
+let years = daysNum / 365;
+let months = daysNum / 31;
+let weeks = daysNum / 7;
+let hours = daysNum * 24;
+let minutes = hours * 60;
+let seconds = minutes * 60;
 
-let days = 365;
-let years = daysToYears(days);
+    if (years >= 1) {
+        console.log(years + 'год');
+    } else {
+        console.log("Меньше года");
+    }
 
-console.log(days + ' дней это ' + years + ' год');
+    if (months >= 1) {
+        console.log(months + ' месяцев');
+    } else {
+        console.log("Меньше месяца");
+    }
 
+    if (weeks >= 1) {
+        console.log(weeks + ' недель');
+    } else {
+        console.log("Меньше недели");
+    }
 
-function daysToMonths(days1) {
-    return Math.round(days1 / 31);
-}
-
-let days1 = 31;
-let months = daysToMonths(days1);
-
-console.log(days1 + ' день это ' + months + ' месяц');
-
-
-function daysToWeeks(days2) {
-    return Math.round(days2 / 7);
-}
-
-let days2 = 7;
-let weeks = daysToWeeks(days2);
-
-console.log(days2 + ' дней в ' + months + ' неделе');
-
-function daysToHours(days3) {
-    return Math.round(days3 * 24);
-}
-
-let days3 = 1;
-let hours = daysToHours(days3);
-
-console.log('В '+ days3 + ' дне ' + hours + ' часа');
-
-function daysToMinutes(days4) {
-    return Math.round(days4 * 1440);
-}
-
-let days4 = 1;
-let minutes = daysToMinutes(days4);
-
-console.log('В '+ days4 + ' дне ' + minutes + ' минут');
-
-function daysToSeconds(days5) {
-    return Math.round(days5 * 86400);
-}
-
-let days5 = 1;
-let seconds = daysToSeconds(days5);
-
-console.log('В '+ days4 + ' дне ' + seconds + ' секунд');
-
+console.log(hours + ' часов');
+console.log(minutes + ' минут');
+console.log(seconds + ' секунд');
 
 // Задание 10
